@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SOLARA — Premium Sun Protection Website
+   PENTA-GONE — Premium Website with Pentagon Background
    Organized stylesheet with clear sections and documentation
    ═══════════════════════════════════════════════════════════════ */
 
@@ -16,18 +16,20 @@
 }
 
 :root {
-  /* Color Palette */
-  --cream: #FAF5FF;
-  --sand: #E0D0F5;
-  --gold: #C8A800;
-  --purple: #2D0A5A;
-  --purple-mid: #4a1080;
-  --purple-light: #9030C0;
-  --white: #FDFAFF;
-  --text: #1A0535;
-  --muted: #7A5A9A;
-  --yellow: #FFE020;
-  --yellow-dim: #C8A800;
+  /* Color Palette - Penta-Gone */
+  --cream: #FFFFFF;
+  --sand: #E8F6FA;
+  --gold: #FBE543;
+  --purple: #1A3A4A;
+  --purple-mid: #44B8DA;
+  --purple-light: #6DCEEE;
+  --white: #FFFFFF;
+  --text: #1A3A4A;
+  --muted: #5A8A9A;
+  --yellow: #FBE543;
+  --yellow-dim: #E5D03D;
+  --blue: #44B8DA;
+  --light-blue: #6DCEEE;
   
   /* Transitions */
   --transition-fast: 0.2s;
@@ -102,7 +104,7 @@ body {
 .progress-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--yellow), var(--purple-light));
+  background: linear-gradient(90deg, var(--yellow), var(--blue));
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -124,7 +126,7 @@ body {
 }
 
 .nav.scrolled {
-  background: rgba(45, 10, 90, 0.92);
+  background: rgba(26, 58, 74, 0.92);
   backdrop-filter: blur(14px);
 }
 
@@ -179,9 +181,9 @@ body {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse 60% 50% at 70% 40%, rgba(255, 220, 20, 0.28) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(140, 50, 200, 0.35) 0%, transparent 60%),
-    linear-gradient(165deg, #0d001f 0%, #1e0040 35%, #4a1080 65%, #7c30b0 100%);
+    radial-gradient(ellipse 60% 50% at 70% 40%, rgba(251, 229, 67, 0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(68, 184, 218, 0.35) 0%, transparent 60%),
+    linear-gradient(165deg, #0a2a3a 0%, #1a3a4a 35%, #44B8DA 65%, #6DCEEE 100%);
 }
 
 .sun {
@@ -191,11 +193,11 @@ body {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: radial-gradient(circle, #FFFDE0 0%, #FFE020 40%, #F0C000 70%, #C89800 100%);
+  background: radial-gradient(circle, #FFFEF5 0%, #FBE543 40%, #E5D03D 70%, #D4C030 100%);
   box-shadow: 
-    0 0 60px 20px rgba(255, 220, 20, 0.5),
-    0 0 120px 40px rgba(255, 200, 0, 0.3),
-    0 0 200px 80px rgba(180, 120, 220, 0.2);
+    0 0 60px 20px rgba(251, 229, 67, 0.5),
+    0 0 120px 40px rgba(251, 229, 67, 0.3),
+    0 0 200px 80px rgba(68, 184, 218, 0.2);
   animation: pulse-sun 4s ease-in-out infinite;
 }
 
@@ -214,10 +216,10 @@ body {
   position: absolute;
   inset: -60px;
   background: repeating-conic-gradient(
-    rgba(255, 220, 20, 0.08) 0deg,
+    rgba(251, 229, 67, 0.08) 0deg,
     transparent 5deg,
     transparent 30deg,
-    rgba(255, 220, 20, 0.08) 35deg
+    rgba(251, 229, 67, 0.08) 35deg
   );
   border-radius: 50%;
 }
@@ -233,7 +235,7 @@ body {
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 220, 20, 0.7);
+  background: rgba(251, 229, 67, 0.7);
   animation: float-particle linear infinite;
   pointer-events: none;
 }
@@ -388,7 +390,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: clamp(8rem, 18vw, 18rem);
   font-weight: 700;
-  color: rgba(255, 224, 32, 0.04);
+  color: rgba(251, 229, 67, 0.04);
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -479,8 +481,8 @@ body {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(ellipse 50% 40% at 50% 30%, rgba(255, 220, 20, 0.5) 0%, transparent 65%),
-    linear-gradient(160deg, #ffe020 0%, #9030c0 40%, #3d1080 75%, #1a0040 100%);
+    radial-gradient(ellipse 50% 40% at 50% 30%, rgba(251, 229, 67, 0.5) 0%, transparent 65%),
+    linear-gradient(160deg, #FBE543 0%, #44B8DA 40%, #1a3a4a 75%, #0a2a3a 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -512,8 +514,8 @@ body {
   display: flex;
   align-items: center;
   background: var(--purple);
-  border-top: 1px solid rgba(255, 224, 32, 0.1);
-  border-bottom: 1px solid rgba(255, 224, 32, 0.1);
+  border-top: 1px solid rgba(251, 229, 67, 0.1);
+  border-bottom: 1px solid rgba(251, 229, 67, 0.1);
 }
 
 .kinetic-track {
@@ -528,7 +530,7 @@ body {
   font-weight: 700;
   font-style: italic;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 224, 32, 0.3);
+  -webkit-text-stroke: 1px rgba(251, 229, 67, 0.3);
   padding: 0 2.5rem;
   flex-shrink: 0;
   transition: color var(--transition-normal), 
@@ -613,7 +615,7 @@ body {
 
 .product-card {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 224, 32, 0.1);
+  border: 1px solid rgba(251, 229, 67, 0.1);
   padding: 2rem;
   cursor: none;
   transition: border-color var(--transition-normal), 
@@ -623,7 +625,7 @@ body {
 }
 
 .product-card:hover {
-  border-color: rgba(255, 224, 32, 0.4);
+  border-color: rgba(251, 229, 67, 0.4);
   transform: translateY(-6px);
 }
 
@@ -807,7 +809,7 @@ body {
    ═══════════════════════════════════════════════════════════════ */
 
 .testimonials {
-  background: linear-gradient(135deg, #F0E8FF 0%, #D8C0FF 50%, #C8A8FF 100%);
+  background: linear-gradient(135deg, #E8F6FA 0%, #B8E5F5 50%, #6DCEEE 100%);
   padding: 8rem 3rem;
   overflow: hidden;
 }
@@ -891,7 +893,7 @@ body {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 224, 32, 0.12) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(251, 229, 67, 0.12) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -902,7 +904,7 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(144, 48, 192, 0.3) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(68, 184, 218, 0.3) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -954,7 +956,7 @@ body {
 .contact-input {
   flex: 1;
   background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 224, 32, 0.25);
+  border: 1px solid rgba(251, 229, 67, 0.25);
   border-right: none;
   color: var(--white);
   padding: 1rem 1.2rem;
@@ -1118,5 +1120,45 @@ body {
   .testimonials,
   .contact-section {
     padding: 4rem 1.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PENTAGON BACKGROUND
+   ═══════════════════════════════════════════════════════════════ */
+
+.pentagon-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pentagon {
+  position: absolute;
+  opacity: 0.15;
+  animation: float-pentagon linear infinite;
+}
+
+.pentagon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes float-pentagon {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
   }
 }

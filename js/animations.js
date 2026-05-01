@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SOLARA — Scroll Animations
+   PENTA-GONE — Scroll Animations
    All GSAP and ScrollTrigger animations organized by section
    ═══════════════════════════════════════════════════════════════ */
 

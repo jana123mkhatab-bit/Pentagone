@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SOLARA — Testimonials Module
+   PENTA-GONE — Testimonials Module
    Manages testimonial carousel and rotation
    ═══════════════════════════════════════════════════════════════ */
 
@@ -10,15 +10,15 @@ const TESTIMONIAL_ROTATE_INTERVAL = 5000; // 5 seconds
  */
 const testimonials = [
   {
-    text: "Finally a sunscreen that disappears into my skin. SOLARA changed my relationship with sun protection forever.",
+    text: "An exceptional experience that exceeded all my expectations. PENTA-GONE has changed the way I think about premium quality.",
     author: "— Layla M., Dubai",
   },
   {
-    text: "I've tried every luxury sunscreen. Nothing comes close to the feel and coverage of SOLARA Golden Veil.",
+    text: "I've explored many options but nothing compares to the elegance and quality of PENTA-GONE.",
     author: "— Sara K., Cairo",
   },
   {
-    text: "Reef-safe and genuinely elegant. I wore this every day on holiday and my skin has never looked better.",
+    text: "Innovative and genuinely impressive. PENTA-GONE delivers excellence in every detail.",
     author: "— Nour A., Beirut",
   },
 ];

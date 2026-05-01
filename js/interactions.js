@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SOLARA — Cursor & Interactive Elements
+   PENTA-GONE — Cursor & Interactive Elements
    Custom cursor tracking and interactive element behaviors
    ═══════════════════════════════════════════════════════════════ */
 

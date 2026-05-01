@@ -1,7 +1,83 @@
 /* ═══════════════════════════════════════════════════════════════
-   SOLARA — Utility Functions
+   PENTA-GONE — Utility Functions
    Helper functions for particles, progress tracking, etc.
    ═══════════════════════════════════════════════════════════════ */
+
+const PENTAGON_CONFIG = {
+  container: '#pentagonBg',
+  creationInterval: 1200, // ms between pentagon creation
+  lifetime: 18000, // ms before pentagon is removed
+  colors: ['#FBE543', '#44B8DA', '#6DCEEE', '#FFFFFF'],
+};
+
+const PENTAGON_SIZE_RANGE = { min: 30, max: 80 };
+
+/**
+ * Create animated floating pentagons in hero section
+ */
+export function createPentagons() {
+  const pentagonContainer = document.querySelector(PENTAGON_CONFIG.container);
+
+  if (!pentagonContainer) {
+    console.warn('Pentagon container not found');
+    return;
+  }
+
+  /**
+   * Generate a single pentagon element
+   */
+  function generatePentagon() {
+    const pentagon = document.createElement('div');
+    pentagon.className = 'pentagon';
+
+    // Random size
+    const size = Math.random() * (PENTAGON_SIZE_RANGE.max - PENTAGON_SIZE_RANGE.min) + PENTAGON_SIZE_RANGE.min;
+
+    // Random position and animation
+    const positionX = Math.random() * 100;
+    const animationDuration = Math.random() * 12 + 10; // 10-22s
+    const animationDelay = Math.random() * 3;
+    
+    // Random color from palette
+    const color = PENTAGON_CONFIG.colors[Math.floor(Math.random() * PENTAGON_CONFIG.colors.length)];
+
+    pentagon.style.cssText = `
+      width: ${size}px;
+      height: ${size}px;
+      left: ${positionX}%;
+      animation-duration: ${animationDuration}s;
+      animation-delay: ${animationDelay}s;
+    `;
+
+    // Create pentagon SVG
+    pentagon.innerHTML = `
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon 
+          points="50,5 95,35 82,90 18,90 5,35" 
+          fill="none" 
+          stroke="${color}" 
+          stroke-width="2"
+          opacity="0.6"
+        />
+      </svg>
+    `;
+
+    pentagonContainer.appendChild(pentagon);
+
+    // Remove pentagon after lifetime expires
+    setTimeout(() => {
+      pentagon.remove();
+    }, PENTAGON_CONFIG.lifetime);
+  }
+
+  // Create initial pentagons
+  for (let i = 0; i < 8; i++) {
+    setTimeout(() => generatePentagon(), i * 200);
+  }
+
+  // Create pentagons at regular intervals
+  setInterval(generatePentagon, PENTAGON_CONFIG.creationInterval);
+}
 
 const PARTICLE_CONFIG = {
   container: '#particles',
